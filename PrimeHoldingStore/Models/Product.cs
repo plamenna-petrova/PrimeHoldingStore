@@ -9,6 +9,7 @@ namespace PrimeHoldingStore.Models
         protected string name;
         protected string brand;
         protected double price;
+        protected double quantity;
 
         public string Name
         {
@@ -43,6 +44,18 @@ namespace PrimeHoldingStore.Models
             set
             {
                 price = value;
+            }
+        }
+
+        public double Quantity
+        {
+            get
+            {
+                return quantity;
+            }
+            set
+            {
+                quantity = value;
             }
         }
 

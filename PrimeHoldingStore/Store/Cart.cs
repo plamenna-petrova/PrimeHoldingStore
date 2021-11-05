@@ -16,7 +16,7 @@ namespace PrimeHoldingStore.Store
             productsToPurchase = new List<Product>();
         }
 
-        public void AddProductToCart(Product product)
+        public void AddProductToCart(Product product, double quantity)
         {
             if (product != null)
             {

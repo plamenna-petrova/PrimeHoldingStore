@@ -7,7 +7,7 @@ namespace PrimeHoldingStore.Store.Interfaces
 {
     public interface ICart
     {
-        void AddProductToCart(Product product);
+        void AddProductToCart(Product product, double quantity);
 
         List<Product> GetProducts();
     }
