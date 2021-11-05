@@ -1,5 +1,6 @@
 ﻿using PrimeHoldingStore.Models;
 using PrimeHoldingStore.Models.Enums;
+using PrimeHoldingStore.Store;
 using System;
 
 namespace PrimeHoldingStore
@@ -19,6 +20,17 @@ namespace PrimeHoldingStore
 
             Product laptop = new Appliances("laptop", "BrandL", 2345, "ModelL", new DateTime(2021 - 03 - 03), 1.125);
             laptop.PrintKeyProductInformation();
+
+            Console.WriteLine("------------------------------------");
+
+            Cart sampleCart = new Cart();
+            sampleCart.AddProductToCart(apples);
+            sampleCart.AddProductToCart(milk);
+            sampleCart.AddProductToCart(tShirt);
+            sampleCart.AddProductToCart(laptop);
+
+            Cashier cashier = new Cashier();
+            cashier.PrintReceipt(sampleCart);
         }
     }
 }
