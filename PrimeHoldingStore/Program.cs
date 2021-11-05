@@ -9,19 +9,13 @@ namespace PrimeHoldingStore
     {
         static void Main(string[] args)
         {
-            Product apples = new Food("apple", "BrandA", 1.50, new DateTime(2021-06-14));
-            apples.PrintKeyProductInformation();
+            Product apples = new Food("apple", "BrandA", 1.50, new DateTime(2021, 6, 14));
 
-            Product milk = new Beverage("milk", "BrandM", 0.99, new DateTime(2022-02-02));
-            milk.PrintKeyProductInformation();
+            Product milk = new Beverage("milk", "BrandM", 0.99, new DateTime(2022, 2, 2));
 
             Product tShirt = new Clothes("T-shirt", "BrandT", 15.99, Size.M, "violet");
-            tShirt.PrintKeyProductInformation();
 
-            Product laptop = new Appliances("laptop", "BrandL", 2345, "ModelL", new DateTime(2021 - 03 - 03), 1.125);
-            laptop.PrintKeyProductInformation();
-
-            Console.WriteLine("------------------------------------");
+            Product laptop = new Appliances("laptop", "BrandL", 2345, "ModelL", new DateTime(2021, 3, 3), 1.125);
 
             Cart sampleCart = new Cart();
             sampleCart.AddProductToCart(apples);
@@ -30,7 +24,7 @@ namespace PrimeHoldingStore
             sampleCart.AddProductToCart(laptop);
 
             Cashier cashier = new Cashier();
-            cashier.PrintReceipt(sampleCart);
+            cashier.PrintReceipt(sampleCart, new DateTime(2021, 6, 14, 12, 34, 56));
         }
     }
 }

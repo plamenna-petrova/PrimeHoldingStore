@@ -6,6 +6,6 @@ namespace PrimeHoldingStore.Store.Interfaces
 {
     public interface ICashier
     {
-        void PrintReceipt(Cart cart);
+        void PrintReceipt(Cart cart, DateTime dateTimeOfPurchase);
     }
 }

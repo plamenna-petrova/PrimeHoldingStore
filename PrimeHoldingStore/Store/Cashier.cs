@@ -14,11 +14,16 @@ namespace PrimeHoldingStore.Store
            
         }
 
-        public void PrintReceipt(Cart cart)
+        public void PrintReceipt(Cart cart, DateTime dateTimeOfPurchase)
         {
+            Console.WriteLine($"Date: {dateTimeOfPurchase.ToString("yyyy-MM-dd HH:mm:ss")}");
+            Console.WriteLine();
+            Console.WriteLine("--Products--");
+            Console.WriteLine();
             foreach (var shoppingItem in cart.GetProducts())
             {
                 shoppingItem.PrintKeyProductInformation();
+                Console.WriteLine();
             }
         }
     }

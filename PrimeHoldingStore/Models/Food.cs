@@ -17,7 +17,7 @@ namespace PrimeHoldingStore.Models
 
         public override void PrintKeyProductInformation()
         {
-            Console.WriteLine($"{name} {brand}");
+            Console.WriteLine($"{name} {brand} {ExpirationDate}");
         }
     }
 }
