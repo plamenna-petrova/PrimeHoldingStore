@@ -22,5 +22,10 @@ namespace PrimeHoldingStore.Models
         {
             Console.WriteLine($"{name} {brand} {Model}");
         }
+
+        public override void PrintBasePriceInformation()
+        {
+            base.PrintBasePriceInformation();
+        }
     }
 }

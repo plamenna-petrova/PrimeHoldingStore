@@ -23,7 +23,7 @@ namespace PrimeHoldingStore.Store
             foreach (var shoppingItem in cart.GetProducts())
             {
                 shoppingItem.PrintKeyProductInformation();
-                Console.WriteLine(shoppingItem.Quantity);
+                shoppingItem.PrintBasePriceInformation();
                 Console.WriteLine();
             }
         }

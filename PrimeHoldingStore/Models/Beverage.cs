@@ -1,23 +1,15 @@
-﻿using PrimeHoldingStore.Models.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace PrimeHoldingStore.Models
 {
-    public class Beverage : Product, IPerishable
+    public class Beverage : PerishableProduct
     {
-        public DateTime ExpirationDate { get; set; }
-
         public Beverage(string name, string brand, double price, DateTime expirationDate)
-            : base(name, brand, price)
+            :base(name, brand, price, expirationDate)
         {
-            ExpirationDate = expirationDate;
-        }
 
-        public override void PrintKeyProductInformation()
-        {
-            Console.WriteLine($"{name} {brand}");
         }
     }
 }

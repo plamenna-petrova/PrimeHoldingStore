@@ -67,5 +67,10 @@ namespace PrimeHoldingStore.Models
         }
 
         public abstract void PrintKeyProductInformation();
+
+        public virtual void PrintBasePriceInformation()
+        {
+            Console.WriteLine($"{quantity} x ${price} = ${Math.Round(price * quantity, 2)}");
+        }
     }
 }
