@@ -27,5 +27,10 @@ namespace PrimeHoldingStore.Models
         {
             base.PrintBasePriceInformation();
         }
+
+        public override void GetProductDiscount(DateTime purchaseDate)
+        {
+            
+        }
     }
 }

@@ -23,5 +23,21 @@ namespace PrimeHoldingStore.Models
         {
             base.PrintBasePriceInformation();
         }
+
+        public override void GetProductDiscount(DateTime purchaseDate)
+        {
+            double perishablesDiscount = 0;
+
+            if (ExpirationDate.Date == purchaseDate.Date)
+            {
+                perishablesDiscount = 0.50 * (price * quantity);
+                Console.WriteLine($"#discount 50% - ${Math.Round(perishablesDiscount, 2)}");
+            }
+            else if (ExpirationDate.Subtract(purchaseDate).TotalDays > 0 && ExpirationDate.Subtract(purchaseDate).TotalDays <= 5)
+            {
+                perishablesDiscount = 0.10 * (price * quantity);
+                Console.WriteLine($"#discount 10% - ${Math.Round(perishablesDiscount, 2)}");
+            }
+        }
     }
 }
