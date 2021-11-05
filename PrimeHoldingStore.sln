@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeHoldingStore", "PrimeHoldingStore\PrimeHoldingStore.csproj", "{CFB95F98-699A-496A-9044-18B819587E2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFB95F98-699A-496A-9044-18B819587E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB95F98-699A-496A-9044-18B819587E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB95F98-699A-496A-9044-18B819587E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB95F98-699A-496A-9044-18B819587E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {380BD1B3-8D8F-4470-889B-300954275100}
+	EndGlobalSection
+EndGlobal
