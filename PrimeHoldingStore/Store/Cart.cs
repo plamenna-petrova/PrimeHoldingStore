@@ -40,10 +40,10 @@ namespace PrimeHoldingStore.Store
                 discountSum += product.CalculateProductDiscount(purchaseDateTime);
             }
 
-            Console.WriteLine($"SUBTOTAL: ${subtotal}");
+            Console.WriteLine($"SUBTOTAL: ${subtotal:F2}");
             Console.WriteLine($"DISCOUNT: -${discountSum:F2}");
             Console.WriteLine();
-            Console.WriteLine($"TOTAL: ${Math.Round((subtotal - discountSum), 2)}");
+            Console.WriteLine($"TOTAL: ${Math.Round((subtotal - discountSum), 2):F2}");
         }
     }
 }
