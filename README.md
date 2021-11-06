@@ -1,4 +1,4 @@
-# Solution to the third pre-selection assignment of the Prime Holding .NET Software Engineer internship
+# Store - the third pre-selection task
 
 ## Idea and implementation
 
