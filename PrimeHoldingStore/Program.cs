@@ -31,9 +31,9 @@ namespace PrimeHoldingStore
             var samplePurchaseDateTime = new DateTime(2021, 6, 14, 12, 34, 56);
             cashier.PrintReceipt(sampleCart, samplePurchaseDateTime);
 
-            TestPurchase testPurchase = new TestPurchase();
+            //TestPurchase testPurchase = new TestPurchase();
 
-            testPurchase.PrintTestPurchaseInformation();
+            //testPurchase.PrintTestPurchaseInformation();
         }
     }
 }
