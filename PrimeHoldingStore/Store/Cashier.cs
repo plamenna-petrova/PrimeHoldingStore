@@ -30,23 +30,23 @@ namespace PrimeHoldingStore.Store
                 case "Beverage":
                     if (discountPercentage == 50)
                     {
-                        Console.WriteLine($"#discount 50% -${Math.Round(productDiscount, 2):F2}");
+                        Console.WriteLine($"#discount 50% -${productDiscount:F2}");
                     }
                     else if (discountPercentage == 10)
                     {
-                        Console.WriteLine($"#discount 10% -${Math.Round(productDiscount, 2):F2}");
+                        Console.WriteLine($"#discount 10% -${productDiscount:F2}");
                     }
                     break;
                 case "Clothes":
                     if (discountPercentage == 10)
                     {
-                        Console.WriteLine($"#discount 10% -${Math.Round(productDiscount, 2):F2}");
+                        Console.WriteLine($"#discount 10% -${productDiscount:F2}");
                     }
                     break;
                 case "Appliances":
                     if (discountPercentage == 5)
                     {
-                        Console.WriteLine($"#discount 5% -${Math.Round(productDiscount, 2):F2}");
+                        Console.WriteLine($"#discount 5% -${productDiscount:F2}");
                     }
                     break;
             }
