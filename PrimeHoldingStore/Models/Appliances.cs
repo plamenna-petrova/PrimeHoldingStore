@@ -28,7 +28,7 @@ namespace PrimeHoldingStore.Models
             base.PrintBasePriceInformation();
         }
 
-        public override void GetProductDiscount(DateTime purchaseDateTime)
+        public override double CalculateProductDiscount(DateTime purchaseDateTime)
         {
             double appliancesDiscount = 0;
 
@@ -37,8 +37,9 @@ namespace PrimeHoldingStore.Models
             if (price > 999 && (purchaseDayOfWeek >= DayOfWeek.Saturday && purchaseDayOfWeek <= DayOfWeek.Sunday))
             {
                 appliancesDiscount = 0.05 * (price * quantity);
-                Console.WriteLine($"#discount 5% ${Math.Round(appliancesDiscount, 2)}");
             }
+
+            return Math.Round(appliancesDiscount, 2);
         }
     }
 }

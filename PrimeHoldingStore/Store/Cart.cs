@@ -28,5 +28,22 @@ namespace PrimeHoldingStore.Store
         {
             return productsToPurchase.ToList();
         }
+
+        public void CalculatePayment(List<Product> products, DateTime purchaseDateTime)
+        {
+            double subtotal = 0;
+            double discountSum = 0;
+
+            foreach (var product in products)
+            {
+                subtotal += Math.Round((product.Price * product.Quantity), 2);
+                discountSum += product.CalculateProductDiscount(purchaseDateTime);
+            }
+
+            Console.WriteLine($"SUBTOTAL: ${subtotal}");
+            Console.WriteLine($"DISCOUNT: -${discountSum}");
+            Console.WriteLine();
+            Console.WriteLine($"TOTAL: ${subtotal - discountSum}");
+        }
     }
 }

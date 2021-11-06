@@ -10,5 +10,7 @@ namespace PrimeHoldingStore.Store.Interfaces
         void AddProductToCart(Product product, double quantity);
 
         List<Product> GetProducts();
+
+        void CalculatePayment(List<Product> products, DateTime purchaseDateTime);
     }
 }

@@ -28,7 +28,7 @@ namespace PrimeHoldingStore.Models
             base.PrintBasePriceInformation();
         }
 
-        public override void GetProductDiscount(DateTime purchaseDateTime)
+        public override double CalculateProductDiscount(DateTime purchaseDateTime)
         {
             double clothesDiscount = 0;
 
@@ -37,8 +37,9 @@ namespace PrimeHoldingStore.Models
             if (purchaseDayOfWeek >= DayOfWeek.Monday && purchaseDayOfWeek <= DayOfWeek.Friday)
             {
                 clothesDiscount = 0.10 * (price * quantity);
-                Console.WriteLine($"#discount 10% - ${Math.Round(clothesDiscount, 2)}");
             }
+
+            return Math.Round(clothesDiscount, 2);
         }
     }
 }
