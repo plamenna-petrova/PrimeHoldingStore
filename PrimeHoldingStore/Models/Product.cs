@@ -73,6 +73,6 @@ namespace PrimeHoldingStore.Models
             Console.WriteLine($"{quantity} x ${price} = ${Math.Round(price * quantity, 2)}");
         }
 
-        public abstract void GetProductDiscount(DateTime purchaseDate);
+        public abstract void GetProductDiscount(DateTime purchaseDateTime);
     }
 }

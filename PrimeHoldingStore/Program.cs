@@ -12,7 +12,7 @@ namespace PrimeHoldingStore
             Product apples = new Food("apple", "BrandA", 1.50, new DateTime(2021, 6, 14));
             apples.Quantity = 2.45;
 
-            Product milk = new Beverage("milk", "BrandM", 0.99, new DateTime(2021, 6, 15));
+            Product milk = new Beverage("milk", "BrandM", 0.99, new DateTime(2022, 2, 2));
             milk.Quantity = 3;
 
             Product tShirt = new Clothes("T-shirt", "BrandT", 15.99, Size.M, "violet");

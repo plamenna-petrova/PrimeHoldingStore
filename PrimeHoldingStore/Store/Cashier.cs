@@ -24,7 +24,8 @@ namespace PrimeHoldingStore.Store
             {
                 shoppingItem.PrintKeyProductInformation();
                 shoppingItem.PrintBasePriceInformation();
-                shoppingItem.GetProductDiscount(dateTimeOfPurchase);   
+                shoppingItem.GetProductDiscount(dateTimeOfPurchase);
+                Console.WriteLine();
             }
         }
     }
