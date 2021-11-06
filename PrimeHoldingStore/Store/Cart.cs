@@ -41,9 +41,9 @@ namespace PrimeHoldingStore.Store
             }
 
             Console.WriteLine($"SUBTOTAL: ${subtotal}");
-            Console.WriteLine($"DISCOUNT: -${discountSum}");
+            Console.WriteLine($"DISCOUNT: -${discountSum:F2}");
             Console.WriteLine();
-            Console.WriteLine($"TOTAL: ${subtotal - discountSum}");
+            Console.WriteLine($"TOTAL: ${Math.Round((subtotal - discountSum), 2)}");
         }
     }
 }

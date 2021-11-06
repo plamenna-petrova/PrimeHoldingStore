@@ -39,7 +39,8 @@ namespace PrimeHoldingStore.Models
                 perishablesDiscount = 0.10 * (price * quantity);
             }
 
-            return Math.Round(perishablesDiscount, 2);
+            double roundedPerishablesDiscount = Math.Round(perishablesDiscount, 2);
+            return roundedPerishablesDiscount;
         }
     }
 }

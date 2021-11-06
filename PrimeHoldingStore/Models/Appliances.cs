@@ -34,7 +34,7 @@ namespace PrimeHoldingStore.Models
 
             var purchaseDayOfWeek = purchaseDateTime.DayOfWeek;
 
-            if (price > 999 && (purchaseDayOfWeek == DayOfWeek.Saturday || purchaseDayOfWeek == DayOfWeek.Sunday))
+            if ((price * quantity) > 999 && (purchaseDayOfWeek == DayOfWeek.Saturday || purchaseDayOfWeek == DayOfWeek.Sunday))
             {
                 appliancesDiscount = 0.05 * (price * quantity);
             }

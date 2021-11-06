@@ -11,9 +11,8 @@ namespace PrimeHoldingStore.Store
     {
         public Cashier()
         {
-           
-        }
 
+        }
 
         public void PrintDiscount(Product product, DateTime dateTimeOfPurchase)
         {
