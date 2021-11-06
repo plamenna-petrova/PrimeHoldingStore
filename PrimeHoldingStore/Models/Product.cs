@@ -70,7 +70,7 @@ namespace PrimeHoldingStore.Models
 
         public virtual void PrintBasePriceInformation()
         {
-            Console.WriteLine($"{quantity} x ${price} = ${Math.Round(price * quantity, 2)}");
+            Console.WriteLine($"{quantity} x ${price:F2} = ${Math.Round(price * quantity, 2)}");
         }
 
         public abstract double CalculateProductDiscount(DateTime purchaseDateTime);

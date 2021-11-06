@@ -19,35 +19,35 @@ namespace PrimeHoldingStore.Store
         {
             var productType = product.GetType().Name;
 
-            var purchaseDayOfWeek = dateTimeOfPurchase.DayOfWeek;
-
             var productDiscount = product.CalculateProductDiscount(dateTimeOfPurchase);
+
+            var baseProductPrice = Math.Round(product.Price * product.Quantity, 2);
+
+            var discountPercentage = Math.Round((productDiscount / baseProductPrice) * 100);
 
             switch (productType)
             {
                 case "Food":
                 case "Beverage":
-                    var perishableProduct = product as PerishableProduct;
-                    var totalDaysFromPurchaseDateTime = perishableProduct.ExpirationDate.Subtract(dateTimeOfPurchase).TotalDays;
-                    if (perishableProduct.ExpirationDate.Date.Equals(dateTimeOfPurchase.Date))
+                    if (discountPercentage == 50)
                     {
-                        Console.WriteLine($"#discount 50% ${productDiscount:F2}");
+                        Console.WriteLine($"#discount 50% -${Math.Round(productDiscount, 2):F2}");
                     }
-                    else if (totalDaysFromPurchaseDateTime > 0 && totalDaysFromPurchaseDateTime <= 5)
+                    else if (discountPercentage == 10)
                     {
-                        Console.WriteLine($"#discount 10% ${productDiscount:F2}");
+                        Console.WriteLine($"#discount 10% -${Math.Round(productDiscount, 2):F2}");
                     }
                     break;
                 case "Clothes":
-                    if (purchaseDayOfWeek >= DayOfWeek.Monday && purchaseDayOfWeek <= DayOfWeek.Friday)
+                    if (discountPercentage == 10)
                     {
-                        Console.WriteLine($"#discount 10% ${productDiscount:F2}");
+                        Console.WriteLine($"#discount 10% -${Math.Round(productDiscount, 2):F2}");
                     }
                     break;
                 case "Appliances":
-                    if (product.Price > 999 && (purchaseDayOfWeek >= DayOfWeek.Saturday && purchaseDayOfWeek <= DayOfWeek.Sunday))
+                    if (discountPercentage == 5)
                     {
-                        Console.WriteLine($"#discount 5% ${productDiscount:F2}");
+                        Console.WriteLine($"#discount 5% -${Math.Round(productDiscount, 2):F2}");
                     }
                     break;
             }

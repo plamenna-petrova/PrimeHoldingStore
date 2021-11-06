@@ -28,8 +28,8 @@ namespace PrimeHoldingStore
             sampleCart.AddProductToCart(laptop, laptop.Quantity);
 
             Cashier cashier = new Cashier();
-            var purchaseDate = new DateTime(2021, 6, 14, 12, 34, 56);
-            cashier.PrintReceipt(sampleCart, purchaseDate);
+            var purchaseDateTime = new DateTime(2021, 6, 14, 12, 34, 56);
+            cashier.PrintReceipt(sampleCart, purchaseDateTime);
         }
     }
 }
