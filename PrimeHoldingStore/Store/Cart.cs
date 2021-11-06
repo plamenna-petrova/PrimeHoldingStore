@@ -43,7 +43,7 @@ namespace PrimeHoldingStore.Store
             Console.WriteLine($"SUBTOTAL: ${subtotal:F2}");
             Console.WriteLine($"DISCOUNT: -${discountSum:F2}");
             Console.WriteLine();
-            Console.WriteLine($"TOTAL: ${subtotal - discountSum:F2}");
+            Console.WriteLine($"TOTAL: ${(subtotal - discountSum):F2}");
         }
     }
 }
